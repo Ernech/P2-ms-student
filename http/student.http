@@ -5,8 +5,8 @@ POST http://localhost:6945/v1/api/student
 Content-Type: application/json
 
 {
-  "name": "Sergio",
-  "lastName": "Marzana",
+  "name": "Andrés",
+  "lastName": "Duarte",
   "phone": "69987654"
 }
 
@@ -15,5 +15,5 @@ GET http://localhost:6945/v1/api/student/all
 Accept: application/json
 
 ### OBTENER ESTUDIANTE POR ID
-GET http://localhost:6945/v1/api/student/3
+GET http://localhost:6945/v1/api/student/1
 Accept: application/json

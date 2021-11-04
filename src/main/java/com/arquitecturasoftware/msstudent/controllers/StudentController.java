@@ -31,13 +31,13 @@ public class StudentController {
     }
 
     @GetMapping(path = "/{id}")
-    public Student getStudentById(@PathVariable(value = "id") Integer id){
+    public Student getStudentById(@PathVariable(value = "id") Integer id) throws Exception{
 
         Optional<Student> studentOptional = studentService.findStudentById(id);
         if(studentOptional.isPresent()){
             return studentOptional.get();
         }else{
-            return new Student(0,"","","");
+            throw new Exception("Estudiante no encontrado");
         }
 
     }
