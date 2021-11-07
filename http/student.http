@@ -5,8 +5,8 @@ POST http://localhost:6945/v1/api/student
 Content-Type: application/json
 
 {
-  "name": "Andrés",
-  "lastName": "Duarte",
+  "name": "Camila",
+  "lastName": "Mendoza",
   "phone": "69987654"
 }
 
@@ -17,3 +17,14 @@ Accept: application/json
 ### OBTENER ESTUDIANTE POR ID
 GET http://localhost:6945/v1/api/student/1
 Accept: application/json
+
+
+### CREAR NUEVO ESTUDIANTE POR GATEWAY
+POST http://localhost:8181/ms-student/v1/api/student
+Content-Type: application/json
+
+{
+  "name": "Sergio",
+  "lastName": "Marzana",
+  "phone": "69987654"
+}
