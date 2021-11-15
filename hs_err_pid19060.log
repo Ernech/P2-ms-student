@@ -1,0 +1,201 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 167772160 bytes for Failed to commit area from 0x0000000761400000 to 0x000000076b400000 of length 167772160.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./src/hotspot/os/windows/os_windows.cpp:3311), pid=19060, tid=9420
+#
+# JRE version:  (11.0.13+8) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.13+8-LTS, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -XX:TieredStopAtLevel=1 -Xverify:none -Dspring.output.ansi.enabled=always -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2021.1.1\lib\idea_rt.jar=56577:C:\Program Files\JetBrains\IntelliJ IDEA 2021.1.1\bin -Dcom.sun.management.jmxremote -Dspring.jmx.enabled=true -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true -Dfile.encoding=UTF-8 com.arquitecturasoftware.msstudent.MsStudentApplication
+
+Host: AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx  , 8 cores, 9G,  Windows 10 , 64 bit Build 19041 (10.0.19041.1202)
+Time: Fri Nov 12 17:56:01 2021 Hora estándar oeste, Sudamérica elapsed time: 0.148524 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000021a6c828800):  JavaThread "Unknown thread" [_thread_in_vm, id=9420, stack(0x000000b967900000,0x000000b967a00000)]
+
+Stack: [0x000000b967900000,0x000000b967a00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x61ccaa]
+V  [jvm.dll+0x7a9839]
+V  [jvm.dll+0x7aaeff]
+V  [jvm.dll+0x7ab5d3]
+V  [jvm.dll+0x24f5d8]
+V  [jvm.dll+0x619fba]
+V  [jvm.dll+0x60e865]
+V  [jvm.dll+0x30710c]
+V  [jvm.dll+0x306f92]
+V  [jvm.dll+0x30bcb6]
+V  [jvm.dll+0x350eaf]
+V  [jvm.dll+0x3508e0]
+V  [jvm.dll+0x2e4208]
+V  [jvm.dll+0x2e5366]
+V  [jvm.dll+0x783657]
+V  [jvm.dll+0x784ddf]
+V  [jvm.dll+0x35dc39]
+V  [jvm.dll+0x7665e0]
+V  [jvm.dll+0x3cb68f]
+V  [jvm.dll+0x3cda21]
+C  [jli.dll+0x5207]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x52651]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x0000021a6a625060, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000021a6c844800 GCTaskThread "GC Thread#0" [stack: 0x000000b967a00000,0x000000b967b00000] [id=11148]
+  0x0000021a6c87f000 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000b967b00000,0x000000b967c00000] [id=18336]
+  0x0000021a6c882000 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000b967c00000,0x000000b967d00000] [id=12512]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffd62c638e7]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000021a6c828030] Heap_lock - owner thread: 0x0000021a6c828800
+
+Heap address: 0x0000000761400000, size: 2540 MB, Compressed Oops mode: Non-zero based: 0x0000000761400000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.026 Loaded shared library C:\Users\hp pavilion\.jdks\corretto-11.0.13\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff719990000 - 0x00007ff71999d000 	C:\Users\hp pavilion\.jdks\corretto-11.0.13\bin\java.exe
+0x00007ffdae830000 - 0x00007ffdaea25000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffd85680000 - 0x00007ffd85695000 	C:\Program Files\Avast Software\Avast\aswhook.dll
+0x00007ffdad5e0000 - 0x00007ffdad69e000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffdac160000 - 0x00007ffdac429000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffdac540000 - 0x00007ffdac640000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffda31e0000 - 0x00007ffda31f9000 	C:\Users\hp pavilion\.jdks\corretto-11.0.13\bin\VCRUNTIME140.dll
+0x00007ffda2ee0000 - 0x00007ffda2ef7000 	C:\Users\hp pavilion\.jdks\corretto-11.0.13\bin\jli.dll
+0x00007ffdac880000 - 0x00007ffdaca21000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffdac640000 - 0x00007ffdac662000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffd99d70000 - 0x00007ffd9a00a000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ffdae050000 - 0x00007ffdae07b000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffdae0b0000 - 0x00007ffdae14e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffdac430000 - 0x00007ffdac53b000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffdac030000 - 0x00007ffdac0cd000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffdae080000 - 0x00007ffdae0b0000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffd87af0000 - 0x00007ffd87b8b000 	C:\Users\hp pavilion\.jdks\corretto-11.0.13\bin\msvcp140.dll
+0x00007ffd62970000 - 0x00007ffd634ef000 	C:\Users\hp pavilion\.jdks\corretto-11.0.13\bin\server\jvm.dll
+0x00007ffdae1d0000 - 0x00007ffdae27c000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffdad2f0000 - 0x00007ffdad38b000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffdad4b0000 - 0x00007ffdad5da000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffdae7e0000 - 0x00007ffdae7e8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffd92dc0000 - 0x00007ffd92dc9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffda4920000 - 0x00007ffda492a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffda3790000 - 0x00007ffda37b7000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffdae160000 - 0x00007ffdae1cb000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffda9e10000 - 0x00007ffda9e22000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffda6410000 - 0x00007ffda6420000 	C:\Users\hp pavilion\.jdks\corretto-11.0.13\bin\verify.dll
+0x00007ffd98280000 - 0x00007ffd98464000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffd98190000 - 0x00007ffd981bc000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffdac0d0000 - 0x00007ffdac153000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffd97790000 - 0x00007ffd977b8000 	C:\Users\hp pavilion\.jdks\corretto-11.0.13\bin\java.dll
+0x00007ffda5800000 - 0x00007ffda580a000 	C:\Users\hp pavilion\.jdks\corretto-11.0.13\bin\jimage.dll
+0x00007ffda57e0000 - 0x00007ffda57ee000 	C:\Users\hp pavilion\.jdks\corretto-11.0.13\bin\instrument.dll
+0x00007ffd98f30000 - 0x00007ffd98f47000 	C:\Users\hp pavilion\.jdks\corretto-11.0.13\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\hp pavilion\.jdks\corretto-11.0.13\bin;C:\WINDOWS\SYSTEM32;C:\Program Files\Avast Software\Avast;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Users\hp pavilion\.jdks\corretto-11.0.13\bin\server
+
+VM Arguments:
+jvm_args: -XX:TieredStopAtLevel=1 -Xverify:none -Dspring.output.ansi.enabled=always -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2021.1.1\lib\idea_rt.jar=56577:C:\Program Files\JetBrains\IntelliJ IDEA 2021.1.1\bin -Dcom.sun.management.jmxremote -Dspring.jmx.enabled=true -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true -Dfile.encoding=UTF-8 
+java_command: com.arquitecturasoftware.msstudent.MsStudentApplication
+java_class_path (initial): D:\Semestre 2-2021\Arquitectura del SW\tarea\ms-student\target\classes;C:\Users\hp pavilion\.m2\repository\org\springframework\cloud\spring-cloud-starter-config\3.0.5\spring-cloud-starter-config-3.0.5.jar;C:\Users\hp pavilion\.m2\repository\org\springframework\cloud\spring-cloud-starter\3.0.4\spring-cloud-starter-3.0.4.jar;C:\Users\hp pavilion\.m2\repository\org\springframework\cloud\spring-cloud-context\3.0.4\spring-cloud-context-3.0.4.jar;C:\Users\hp pavilion\.m2\repository\org\springframework\security\spring-security-rsa\1.0.10.RELEASE\spring-security-rsa-1.0.10.RELEASE.jar;C:\Users\hp pavilion\.m2\repository\org\bouncycastle\bcpkix-jdk15on\1.68\bcpkix-jdk15on-1.68.jar;C:\Users\hp pavilion\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.68\bcprov-jdk15on-1.68.jar;C:\Users\hp pavilion\.m2\repository\org\springframework\cloud\spring-cloud-config-client\3.0.5\spring-cloud-config-client-3.0.5.jar;C:\Users\hp pavilion\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.5.6\spring-boot-autoconfigure-2.5.6.jar;C:\Users\hp pavilion\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.12.5\jackson-annotations-2.12.5.jar;C:\Users\hp pavilion\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\hp pavilion\.m2\repository\org\apache\httpcomponents\httpcore\4.4.14\httpcore-4.4.14.jar;C:\Users\hp pavilion\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar;C:\Users\hp pavilion\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.12.5\jackson-databind-2.12.5.jar;C:\Users\hp pavilion\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.12.5\jackson-core-2.12.5.jar;C:\Users\hp pavilion\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\2.5.6\spring-boot-starter-data-jpa-2.5.6.jar;C:\Users\hp pavilion\.m2\repository\org\springframework\boot\spring-boot-starter-aop\2.5.6\spring-boot-starter-aop-2.5.6.jar;C:\Users\hp pavilion\.m2\repository\o
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     bool BytecodeVerificationLocal                = false                                     {product} {command line}
+     bool BytecodeVerificationRemote               = false                                     {product} {command line}
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 167772160                                 {product} {ergonomic}
+     bool ManagementServer                         = true                                      {product} {command line}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2663383040                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 7549744                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 244108496                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 0                                      {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     intx TieredStopAtLevel                        = 1                                         {product} {command line}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=D:\zulu11.48.21-ca-jdk11.0.11-win_x64
+PATH=D:\zulu11.48.21-ca-jdk11.0.11-win_x64\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\flutter\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\hp pavilion\AppData\Local\Microsoft\WindowsApps;C:\Users\hp pavilion\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\hp pavilion\AppData\Roaming\npm;C:\Program Files\heroku\bin;D:\CursoJunitMockito\apache-maven-3.8.1\bin;
+USERNAME=hp pavilion
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 24 Stepping 1, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.1202)
+OS uptime: 8 days 5:27 hours
+Hyper-V role detected
+
+CPU:total 8 (initial active 8) (8 cores per cpu, 2 threads per core) family 23 model 24 stepping 1 microcode 0x0, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, mmxext, 3dnowpref, lzcnt, sse4a, ht, tsc, tscinvbit, tscinv, bmi1, bmi2, adx, sha, fma
+
+Memory: 4k page, system-wide physical 10153M (886M free)
+TotalPageFile size 17955M (AvailPageFile size 108M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 58M, peak: 218M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.13+8-LTS) for windows-amd64 JRE (11.0.13+8-LTS), built on Oct 13 2021 21:32:06 by "Administrator" with unknown MS VC++:1916
+
+END.
