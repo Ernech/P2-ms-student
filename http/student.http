@@ -11,7 +11,7 @@ Content-Type: application/json
 }
 
 ### OBTENER TODOS LOS ESTUDIANTES
-GET http://localhost:6945/v1/api/student/all
+GET http://192.168.1.14:8181/ms-student/v1/api/student/all
 Accept: application/json
 
 ### OBTENER ESTUDIANTE POR ID
@@ -20,11 +20,11 @@ Accept: application/json
 
 
 ### CREAR NUEVO ESTUDIANTE POR GATEWAY
-POST http://localhost:8181/ms-student/v1/api/student
+POST http://192.168.1.14:8181/ms-student/v1/api/student
 Content-Type: application/json
 
 {
-  "name": "Sergio",
-  "lastName": "Marzana",
-  "phone": "69987654"
+  "name": "Mayra",
+  "lastName": "Medina",
+  "phone": "69961044"
 }

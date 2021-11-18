@@ -1,6 +1,7 @@
 FROM azul/zulu-openjdk:11.0.11
 RUN apt update
-
+RUN mkdir -p /opt/arquitectura/logs
+VOLUME /opt/arquitectura/logs
 #COPY target/ms-student-0.0.1-SNAPSHOT.jar ms-student-0.0.1.jar
 ARG DEPENDENCY=target/dependency
 COPY ${DEPENDENCY}/BOOT-INF/lib app/lib

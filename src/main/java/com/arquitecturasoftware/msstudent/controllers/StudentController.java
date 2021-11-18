@@ -21,16 +21,19 @@ public class StudentController {
     }
 
     @PostMapping
+    @CrossOrigin(origins = "http://localhost:8080")
     public Student createStudent(@RequestBody Student student){
         return studentService.saveStudent(student);
     }
 
     @GetMapping(path = "/all")
+    @CrossOrigin(origins = "http://localhost:8080")
     public List<Student> getAllStudents(){
         return studentService.listAllStudents();
     }
 
     @GetMapping(path = "/{id}")
+    @CrossOrigin(origins = "http://localhost:8080")
     public Student getStudentById(@PathVariable(value = "id") Integer id) throws Exception{
 
         Optional<Student> studentOptional = studentService.findStudentById(id);
