@@ -22,6 +22,18 @@ Accept: application/json
 ### CREAR NUEVO ESTUDIANTE POR GATEWAY
 POST http://192.168.1.14:8181/ms-student/v1/api/student
 Content-Type: application/json
+Origin: http://localhost:8080
+
+{
+  "name": "Mayra",
+  "lastName": "Medina",
+  "phone": "69961044"
+}
+
+### CREAR NUEVO ESTUDIANTE POR GATEWAY
+POST http://localhost:8181/ms-student/v1/api/student
+Content-Type: application/json
+Origin: http://localhost:8080
 
 {
   "name": "Mayra",
