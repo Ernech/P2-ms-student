@@ -19,3 +19,8 @@ eureka:
   instance:
     leaseRenewalIntervalInSeconds: 4
     leaseExpirationDurationInSeconds: 8
+arquitectura:
+  software: '{cipher}459f6bd45396d36ecd7e2098c2a4df9de9cb935321bec9698163fad9640f48ea'
+
+encrypt:
+  key: ds5943RfsFDrJeRE4564vdsrdDsNEfSDfd4FRH4555vfDGds4gd

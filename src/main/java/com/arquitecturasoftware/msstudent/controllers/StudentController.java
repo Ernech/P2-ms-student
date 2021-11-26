@@ -1,5 +1,6 @@
 package com.arquitecturasoftware.msstudent.controllers;
 
+import com.arquitecturasoftware.msstudent.config.StudentConfig;
 import com.arquitecturasoftware.msstudent.entities.Student;
 import com.arquitecturasoftware.msstudent.services.StudentServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +16,17 @@ public class StudentController {
 
     StudentServiceImpl studentService;
 
+    StudentConfig studentConfig;
+
     @Autowired
-    public StudentController(StudentServiceImpl studentService) {
+    public StudentController(StudentServiceImpl studentService, StudentConfig studentConfig) {
         this.studentService = studentService;
+        this.studentConfig = studentConfig;
+    }
+
+    @GetMapping(path = "test")
+    public String testEncrypt(){
+        return studentConfig.showConfiguration();
     }
 
     @PostMapping
